@@ -71,15 +71,15 @@ class Solution {
         // initialize queues with border cells
         for(int i=0;i<n;i++)
         {
-            pacificQueue.add(new Pair(i,0)); // top boundary
-            atlanticQueue.add(new Pair(i,m-1)); // bottom boundary
+            pacificQueue.add(new Pair(i,0)); // left boundary
+            atlanticQueue.add(new Pair(i,m-1)); // right boundary
             pacific[i][0]=true;
             atlantic[i][m-1]=true;
         }
         for(int j=0;j<m;j++)
         {
-            pacificQueue.add(new Pair(0,j)); // left boundary
-            atlanticQueue.add(new Pair(n-1,j)); // right boundary
+            pacificQueue.add(new Pair(0,j)); // top boundary
+            atlanticQueue.add(new Pair(n-1,j)); // bottom boundary
             pacific[0][j]=true;
             atlantic[n-1][j]=true;
         }
