@@ -6,7 +6,7 @@ class Solution {
         dummy.next=head;
         ListNode first=dummy;
         ListNode second=dummy;
-        // move the first pointer n steps ahead
+        // move the first pointer n+1 steps ahead
         for(int i=0;i<=n;i++)
         {
             if(first==null)return null;
@@ -18,7 +18,7 @@ class Solution {
             first=first.next;
             second=second.next;
         }
-        // now second is at nth node from end , remove it
+        // now second is at previous of nth node from end , remove it
         second.next=second.next.next;
         return dummy.next;
     }
